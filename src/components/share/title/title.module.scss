@@ -1,0 +1,19 @@
+@use '@var/colors';
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+}
+.regular {
+    color: colors.$darkBlue;
+    text-transform: capitalize;
+    font-size: 48px;
+}
+.bold {
+    color: colors.$greenTitleBold;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 50px;
+}

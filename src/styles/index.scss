@@ -11,15 +11,9 @@ html {
 .app {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    a {
-        color: colors.$black;
-    }
-    main {
-        flex: 1 1 auto;
-    }
+    font-family: 'Rubik', sans-serif;
+    padding-top: 32px;
+
     &._isLock {
         overflow: hidden;
         padding-right: 15px;
@@ -33,19 +27,50 @@ html {
 %container {
     padding: 0 #{global.$sideIndent + px};
     margin: 0 auto;
-}
+    display: flex;
+    column-gap: 20px;
 
+    main {
+        flex: 0 1 1225px;
+        width: 100%;
+    }
+    #sidebarWrapper {
+        flex: 0 0 395px;
+    }
+    #sidebar {
+        position: sticky;
+        top: 32px;
+    }
+}
 
 ._container-large {
     @extend %container;
     max-width: global.$maxWidthContainerLarge;
+    min-height: 400px;
 }
 ._container-default {
     @extend %container;
     max-width: global.$maxWidthContainer;
+    min-height: 400px;
 }
 ._title {
     color: colors.$black;
     text-align: center;
     @include index.responsive-font(34, 64, 320, 1800);
+}
+
+.swiper-pagination-bullet {
+    transition: all 1.2s ease 0s;
+    width: 6px !important;
+    height: 6px !important;
+}
+.swiper-pagination-bullet-active {
+    background: #047857 !important;
+    width: 44px !important;
+    border-radius: 16px !important;
+}
+.swiper-button-disabled {
+    opacity: 0.6 !important;
+    cursor: default !important;
+    pointer-events: none !important;
 }

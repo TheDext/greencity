@@ -1,6 +1,6 @@
-$maxDesignWidth: 1890; //Ширина полотна
-$maxWidth: 1565; //Ширина контейнера: контент
-$sideIndent: 20; //Боковой отступ (кол-во px с одной стороны)
+$maxDesignWidth: 1920; //Ширина полотна
+$maxWidth: 1640; //Ширина контейнера: контент
+$sideIndent: 140; //Боковой отступ (кол-во px с одной стороны)
 
 $maxWidthContainer: #{$maxWidth + $sideIndent * 2}px; //Ширина контейнера: контент + боковые отступы
 $maxWidthContainerLarge: #{$maxDesignWidth + $sideIndent * 2}px; //Ширина большого контейнера: контент + боковые отступы
