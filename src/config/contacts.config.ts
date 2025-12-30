@@ -55,5 +55,14 @@ const contactsConfig = [
         subtext: 'Тюльпаны 🌷 Рассада',
         additionalClassName: 'point',
     },
+    {
+        id: 'ct07',
+        img: img06,
+        title: 'Адрес производтва',
+        link: 'https://yandex.ru/maps/-/CLTJN-nv',
+        label: 'Тюменская область, Заводоуовский район, п. Мичуринский 14 ',
+        subtitle: 'Тепличное хозяйство',
+        additionalClassName: 'point',
+    },
 ];
 export default contactsConfig;

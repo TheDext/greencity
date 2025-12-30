@@ -19,7 +19,7 @@ export const Contacts = () => {
                         subtext,
                     }) =>
                         link ? (
-                            <Link to={link} id={id}>
+                            <Link to={link} key={id}>
                                 <div
                                     className={classNames(classes.item, {}, [
                                         classes[additionalClassName],
@@ -57,7 +57,7 @@ export const Contacts = () => {
                                 className={classNames(classes.item, {}, [
                                     classes[additionalClassName],
                                 ])}
-                                id={id}
+                                key={id}
                             >
                                 <div className={classes.img}>
                                     <img src={img} alt="icon" />

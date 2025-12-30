@@ -1,0 +1,48 @@
+@use '@var/colors';
+
+.advantages {
+    margin-top: 60px;
+}
+.subtitle {
+    font-size: 18px;
+    color: colors.$darkBlue;
+    text-align: center;
+    margin-top: 22px;
+}
+.row {
+    display: flex;
+    margin: 0 -10px;
+    margin-top: 64px;
+}
+.column {
+    padding: 0 10px;
+    flex: 0 1 25%;
+    display: flex;
+}
+.item {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid colors.$greyBorder;
+    width: 100%;
+}
+.img {
+    width: 86px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: colors.$greenLight;
+}
+.text {
+    margin-top: 36px;
+    color: colors.$darkBlue;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    flex: 1 1 auto;
+}

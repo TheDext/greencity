@@ -1,0 +1,35 @@
+@use '@var/colors';
+
+.price {
+    margin-top: 60px;
+    text-align: center;
+}
+.subtitle {
+    font-size: 18px;
+    color: colors.$darkBlue;
+    text-align: center;
+    margin-top: 22px;
+}
+.img {
+    margin-top: 32px;
+}
+.btn {
+    background: colors.$greenTitleBold;
+    padding: 17px 25px;
+    margin: 0 auto;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    max-width: 360px;
+    color: colors.$white;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: all 0.6s ease 0s;
+
+    &:hover {
+        background: colors.$green;
+    }
+}

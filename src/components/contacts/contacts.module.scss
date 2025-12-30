@@ -83,3 +83,9 @@
         background: colors.$greyLight;
     }
 }
+
+.row {
+    & > *:last-child {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+@use '@var/colors';
+
+.footer {
+    text-align: center;
+    padding: 60px 0;
+    background: colors.$blackBgFooter;
+}
+
+.row {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+}
+.item {
+    padding: 3px 19px;
+}
+.text {
+    margin-top: 6px;
+    color: colors.$greyFooter;
+    font-weight: 500;
+    font-size: 16px;
+}
+.bottomText {
+    margin-top: 60px;
+    color: colors.$greyFooter;
+    font-size: 18px;
+}
