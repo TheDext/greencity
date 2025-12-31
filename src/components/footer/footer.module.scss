@@ -1,4 +1,5 @@
 @use '@var/colors';
+@use '@mixins/index';
 
 .footer {
     text-align: center;
@@ -25,4 +26,20 @@
     margin-top: 60px;
     color: colors.$greyFooter;
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .logo {
+        img {
+            @include index.responsive-width(250, 335, 320, 768);
+        }
+    }
+    .row {
+        flex-direction: column;
+        row-gap: 16px;
+    }
 }

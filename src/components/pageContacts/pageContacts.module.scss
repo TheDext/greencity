@@ -1,4 +1,5 @@
 @use '@var/colors';
+@use '@mixins/index';
 
 .pageContacts {
     margin-top: 60px;
@@ -9,7 +10,8 @@
     margin-top: 32px;
 }
 .column {
-    flex: 0 1 50%;
+    flex: 1 1 50%;
+    min-width: 356px;
 }
 .column._full {
     flex: 1 1 100%;
@@ -33,19 +35,19 @@
 }
 .title {
     color: colors.$grey;
-    font-size: 22px;
+    @include index.responsive-font(14, 22, 320, 768);
 }
 .label {
     color: colors.$darkBlue;
-    font-size: 24px;
+    @include index.responsive-font(18, 24, 320, 768);
 }
 .subtitle {
     font-size: 14px;
     color: colors.$greyText;
 }
 .subtext {
-    font-size: 24px;
     color: colors.$darkBlue;
+    @include index.responsive-font(18, 24, 320, 768);
 }
 
 .item.tel {

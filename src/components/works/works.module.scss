@@ -1,4 +1,74 @@
+//@use '@var/colors';
+//
+//.works {
+//    margin-top: 60px;
+//}
+//.subtitle {
+//    font-size: 18px;
+//    color: colors.$darkBlue;
+//    text-align: center;
+//    margin-top: 22px;
+//}
+//.tabs {
+//    margin-top: 32px;
+//    column-gap: 6px;
+//    display: flex;
+//    justify-content: center;
+//}
+//.tab {
+//    background: colors.$greenLight;
+//    color: colors.$greenTitleBold;
+//    font-size: 18px;
+//    font-weight: 500;
+//    transition: all 0.5s ease 0s;
+//    border-radius: 30px;
+//    padding: 16px;
+//    cursor: pointer;
+//
+//    &:hover {
+//        color: colors.$white;
+//        background: colors.$greenTitleBold;
+//    }
+//
+//    &._active {
+//        color: colors.$white;
+//        background: colors.$greenTitleBold;
+//    }
+//}
+//
+//.row {
+//    display: flex;
+//    flex-wrap: wrap;
+//    margin: 0 -8px;
+//    margin-top: 32px;
+//    row-gap: 16px;
+//}
+//.column {
+//    padding: 0 8px;
+//    flex: 0 1 20%;
+//    display: flex;
+//}
+//.item {
+//    width: 100%;
+//
+//    //min-width: 230px;
+//    .img {
+//        border-radius: 15px;
+//        overflow: hidden;
+//        width: 100%;
+//
+//        img {
+//            width: 100%;
+//            min-width: 197px;
+//            //width: 232px;
+//            height: 250px;
+//            object-fit: cover;
+//        }
+//    }
+//}
+
 @use '@var/colors';
+@use '@mixins/index';
 
 .works {
     margin-top: 60px;
@@ -19,12 +89,15 @@
     background: colors.$greenLight;
     color: colors.$greenTitleBold;
     font-size: 18px;
+    @include index.responsive-font(12, 18, 992, 1170);
     font-weight: 500;
     transition: all 0.5s ease 0s;
     border-radius: 30px;
     padding: 16px;
+    @include index.responsive-property('paddingLeft', 10, 16, 992, 1170);
+    @include index.responsive-property('paddingRight', 10, 16, 992, 1170);
     cursor: pointer;
-
+    position: relative;
     &:hover {
         color: colors.$white;
         background: colors.$greenTitleBold;
@@ -37,17 +110,21 @@
 }
 
 .row {
-    margin-top: 32px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 16px;
-    flex-wrap: wrap;
+    margin-top: 32px;
 }
-.column {
+
+.item {
+    width: 100%;
     .img {
         border-radius: 15px;
         overflow: hidden;
+        width: 100%;
+
         img {
-            width: 232px;
+            width: 100%;
             height: 250px;
             object-fit: cover;
         }

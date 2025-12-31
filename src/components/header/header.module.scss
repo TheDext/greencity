@@ -1,0 +1,52 @@
+@use '@var/colors';
+@use '@mixins/index';
+
+.header {
+    margin-bottom: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background: colors.$pageBg;
+    padding: 16px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 9px;
+}
+.phone {
+    color: colors.$blackTelText;
+    @include index.responsive-font(12, 16, 320, 768);
+}
+.socials {
+    display: flex;
+    column-gap: 9px;
+}
+.item {
+    @include index.responsive-height(25, 32, 320, 768);
+    @include index.responsive-width(25, 32, 320, 768);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item.tel {
+    background: colors.$green;
+
+    img {
+        @include index.responsive-height(10, 15, 320, 768);
+        @include index.responsive-width(10, 15, 320, 768);
+    }
+}
+.item.tg {
+    background: colors.$blueTg;
+    img {
+        @include index.responsive-height(7.6, 15, 320, 768);
+        @include index.responsive-width(10, 15, 320, 768);
+        transform: translate(-2px, 0);
+    }
+}

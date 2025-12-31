@@ -18,18 +18,20 @@ export const Catalog = () => {
             <Title regular="наш" bold="каталог" />
             <div className={classes.row}>
                 {catalogConfig.map(({ id, img, icon, label, link }) => (
-                    <div key={id} onClick={() => handleClick(link)}>
-                        <div className={classes.column}>
-                            <div className={classes.item}>
-                                <div className={classes.img}>
-                                    <img src={img} alt="img" />
+                    <div
+                        className={classes.column}
+                        key={id}
+                        onClick={() => handleClick(link)}
+                    >
+                        <div className={classes.item}>
+                            <div className={classes.img}>
+                                <img src={img} alt="img" />
+                            </div>
+                            <div className={classes.bottom}>
+                                <div className={classes.icon}>
+                                    <img src={icon} alt="icon" />
                                 </div>
-                                <div className={classes.bottom}>
-                                    <div className={classes.icon}>
-                                        <img src={icon} alt="icon" />
-                                    </div>
-                                    <div className={classes.label}>{label}</div>
-                                </div>
+                                <div className={classes.label}>{label}</div>
                             </div>
                         </div>
                     </div>

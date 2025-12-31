@@ -12,3 +12,9 @@
     background: colors.$greenLight;
     color: colors.$green;
 }
+
+@media (max-width: 992px) {
+    .selfProduction {
+        font-size: 12px;
+    }
+}

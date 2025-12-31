@@ -13,6 +13,7 @@ html {
     height: 100%;
     font-family: 'Rubik', sans-serif;
     padding-top: 32px;
+    background: colors.$pageBg;
 
     &._isLock {
         overflow: hidden;
@@ -25,21 +26,28 @@ html {
 }
 
 %container {
-    padding: 0 #{global.$sideIndent + px};
+    @include index.responsive-property('paddingLeft', 16, 140, 1440, 1920);
+    @include index.responsive-property('paddingRight', 16, 140, 1440, 1920);
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     column-gap: 20px;
 
     main {
         flex: 0 1 1225px;
-        width: 100%;
+        max-width: 100%;
     }
+
     #sidebarWrapper {
-        flex: 0 0 395px;
+        @include index.responsive-width(350, 395, 1440, 1920);
     }
     #sidebar {
         position: sticky;
         top: 32px;
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
     }
 }
 

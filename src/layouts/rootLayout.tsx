@@ -10,28 +10,34 @@ import { Videos } from '@/components/videos';
 import { PageContacts } from '@/components/pageContacts/pageContacts';
 import { YandexMap } from '@/components/map';
 import { Footer } from '@/components/footer';
+import useMatchMedia from '@/core/hooks/useMatchMedia';
+import { Header } from '@/components/header';
 
 const RootLayout = () => {
+    const { isDesktop, isTablet, isMobile } = useMatchMedia();
     return (
         <div className="_container-default">
             <main>
+                {isMobile && <Header />}
                 <MainScreen />
                 <Catalog />
                 <Works />
                 <Advantages />
                 <Price />
-                <Videos />
+                {/*<Videos />*/}
                 <PageContacts />
                 <YandexMap />
                 <Footer />
             </main>
-            <div id="sidebarWrapper">
-                <div id="sidebar">
-                    <Logo />
-                    <SelfProduction />
-                    <Contacts />
+            {!isMobile && (
+                <div id="sidebarWrapper">
+                    <div id="sidebar">
+                        <Logo />
+                        <SelfProduction />
+                        <Contacts />
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 };
