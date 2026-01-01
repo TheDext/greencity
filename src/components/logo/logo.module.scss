@@ -1,0 +1,9 @@
+@use '@mixins/index';
+
+.logo {
+}
+@media (max-width: 768px) {
+    .logo img {
+        @include index.responsive-width(80, 99, 320, 425);
+    }
+}

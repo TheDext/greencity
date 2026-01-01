@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import classes from './appVideo.module.scss';
 import playIcon from '@icons/play.png';
 import classNames from '@/shared/lib/classNames';

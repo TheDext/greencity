@@ -7,8 +7,9 @@ interface MatchMediaResult {
 }
 
 const useMatchMedia = (): MatchMediaResult => {
-    const screens = ['isMobile', 'isTablet', 'isDesktop'] as const;
+    const screens = ['isMobileL', 'isMobile', 'isTablet', 'isDesktop'] as const;
     const queries = [
+        '(max-width: 425px)',
         '(max-width: 768px)',
         '(min-width: 769px) and (max-width: 992px)',
         '(min-width: 993px)',

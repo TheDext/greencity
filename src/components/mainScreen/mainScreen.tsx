@@ -6,8 +6,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import classNames from '@/shared/lib/classNames';
 import chevroneIcon from '@icons/chevrone.png';
+import useMatchMedia from '@/core/hooks/useMatchMedia';
 
 export const MainScreen = () => {
+    const { isMobileL } = useMatchMedia();
     return (
         <div className={classes.mainScreen}>
             <Swiper
@@ -33,9 +35,9 @@ export const MainScreen = () => {
                     el: '.pagination',
                 }}
             >
-                {mainScreenConfig.map(({ img, id }) => (
+                {mainScreenConfig.map(({ img, imgMob, id }) => (
                     <SwiperSlide id={id} className={classes.slide}>
-                        <img src={img} alt="img" />
+                        <img src={isMobileL ? imgMob : img} alt="img" />
                     </SwiperSlide>
                 ))}
             </Swiper>

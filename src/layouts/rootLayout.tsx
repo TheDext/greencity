@@ -24,10 +24,10 @@ const RootLayout = () => {
                 <Works />
                 <Advantages />
                 <Price />
-                {/*<Videos />*/}
-                <PageContacts />
-                <YandexMap />
-                <Footer />
+                <Videos />
+                {/*<PageContacts />*/}
+                {/*<YandexMap />*/}
+                {/*<Footer />*/}
             </main>
             {!isMobile && (
                 <div id="sidebarWrapper">

@@ -26,8 +26,8 @@
     column-gap: 9px;
 }
 .item {
-    @include index.responsive-height(25, 32, 320, 768);
-    @include index.responsive-width(25, 32, 320, 768);
+    @include index.responsive-height(29, 32, 320, 768);
+    @include index.responsive-width(29, 32, 320, 768);
 
     border-radius: 50%;
     display: flex;
@@ -38,15 +38,15 @@
     background: colors.$green;
 
     img {
-        @include index.responsive-height(10, 15, 320, 768);
-        @include index.responsive-width(10, 15, 320, 768);
+        @include index.responsive-height(13, 15, 320, 768);
+        @include index.responsive-width(13, 15, 320, 768);
     }
 }
 .item.tg {
     background: colors.$blueTg;
     img {
-        @include index.responsive-height(7.6, 15, 320, 768);
-        @include index.responsive-width(10, 15, 320, 768);
+        @include index.responsive-width(14, 17, 320, 768);
+        @include index.responsive-height(11, 13, 320, 768);
         transform: translate(-2px, 0);
     }
 }

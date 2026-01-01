@@ -1,8 +1,54 @@
 .videos {
     margin-top: 60px;
+    position: relative;
 }
 .row {
     display: flex;
     justify-content: center;
     column-gap: 60px;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    transform: translate(-50%, 0);
+    padding: 0 6px;
+    width: 300px;
+}
+.arrow {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background: rgba(255, 255, 255, 0.65);
+    }
+}
+.arrow.arrowNext {
+    transform: rotate(180deg);
+}
+.pagination {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .row {
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+    }
 }

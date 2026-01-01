@@ -53,22 +53,6 @@ export const Works = () => {
                 </Swiper>
             </div>
 
-            {/*<div className={classes.tabs}>*/}
-            {/*    {tabs.map(({ id, text }) => (*/}
-            {/*        <div*/}
-            {/*            className={classNames(*/}
-            {/*                classes.tab,*/}
-            {/*                { [classes._active]: id === currentCategory },*/}
-            {/*                []*/}
-            {/*            )}*/}
-            {/*            key={id}*/}
-            {/*            onClick={() => setCurrentCategory(id)}*/}
-            {/*        >*/}
-            {/*            {text}*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
-            {/*</div>*/}
-
             <div className={classes.row}>
                 {items[currentCategory]
                     ? items[currentCategory].map(({ id, img }) => (

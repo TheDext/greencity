@@ -1,4 +1,5 @@
 @use '@var/colors';
+@use '@mixins/index';
 
 .contacts {
     margin-top: 60px;
@@ -22,18 +23,18 @@
 }
 .title {
     color: colors.$grey;
-    font-size: 22px;
+    @include index.responsive-font(18, 22, 992, 1920);
 }
 .label {
     color: colors.$darkBlue;
-    font-size: 24px;
+    @include index.responsive-font(20, 24, 992, 1920);
 }
 .subtitle {
-    font-size: 14px;
     color: colors.$greyText;
+    @include index.responsive-font(12, 14, 992, 1920);
 }
 .subtext {
-    font-size: 24px;
+    @include index.responsive-font(20, 24, 992, 1920);
     color: colors.$darkBlue;
 }
 
