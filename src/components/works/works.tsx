@@ -20,6 +20,10 @@ export const Works = ({ setShowModal, setCurrent, setSlideId }) => {
 
     useEffect(() => {
         if (location.hash) {
+            console.log(
+                'items[currentCategory]',
+                items[location.hash.substring(1)]
+            );
             setCurrentCategory(location.hash.substring(1));
         }
     }, [location]);
