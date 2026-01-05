@@ -23,13 +23,7 @@ export const MainScreen = () => {
                 }}
                 speed={1200}
                 className={classes.slider}
-                // breakpoints={{
-                //     320: { slidesPerView: 1.3 },
-                //     426: { slidesPerView: 2 },
-                //     769: { slidesPerView: 2.4 },
-                //     993: { slidesPerView: 4 },
-                //     1600: { slidesPerView: 6 },
-                // }}
+
                 pagination={{
                     clickable: true,
                     el: '.pagination',

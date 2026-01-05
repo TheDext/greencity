@@ -7,10 +7,16 @@ import classNames from '@/shared/lib/classNames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-export const Works = () => {
+export const Works = ({ setShowModal, setCurrent, setSlideId }) => {
     const [currentCategory, setCurrentCategory] = useState('tulips');
     const { tabs, items } = worksConfig;
     const location = useLocation();
+
+    const handleClick = (slideId) => {
+        setCurrent(currentCategory);
+        setSlideId(slideId);
+        setShowModal(true);
+    };
 
     useEffect(() => {
         if (location.hash) {
@@ -27,9 +33,7 @@ export const Works = () => {
             <div className={classes.tabs}>
                 <Swiper
                     watchOverflow={true}
-                    slidesPerView="auto" // Важно!
-                    // freeMode={false}
-                    // cssMode={false}
+                    slidesPerView="auto"
                     spaceBetween={6}
                 >
                     {tabs.map(({ id, text }) => (
@@ -55,8 +59,12 @@ export const Works = () => {
 
             <div className={classes.row}>
                 {items[currentCategory]
-                    ? items[currentCategory].map(({ id, img }) => (
-                          <div key={id} className={classes.column}>
+                    ? items[currentCategory].map(({ id, img, slideId }) => (
+                          <div
+                              key={id}
+                              className={classes.column}
+                              onClick={() => handleClick(slideId)}
+                          >
                               <div className={classes.item}>
                                   <div className={classes.img}>
                                       <img src={img} alt="img" />
