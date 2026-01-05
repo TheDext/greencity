@@ -56,6 +56,9 @@
 }
 
 @media (max-width: 768px) {
+    .mainScreen {
+        padding-top: 35px;
+    }
     .slide {
         img {
             height: 360px;

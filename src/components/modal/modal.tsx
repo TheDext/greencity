@@ -7,6 +7,8 @@ import { useClickAway } from 'react-use';
 import classNames from '@/shared/lib/classNames';
 import chevroneIcon from '@icons/chevrone.png';
 import { Navigation, Pagination } from 'swiper/modules';
+import closeIcon from '@icons/close.png';
+
 export const Modal = ({ current, setShowModal, slideId }) => {
     const { items } = worksConfig;
 
@@ -19,6 +21,12 @@ export const Modal = ({ current, setShowModal, slideId }) => {
         <div className={classes.modal}>
             <div ref={ref} className={classes.body}>
                 <div className={classes.content}>
+                    <div
+                        className={classes.close}
+                        onClick={() => setShowModal(false)}
+                    >
+                        <img src={closeIcon} alt="closeIcon" />
+                    </div>
                     <Swiper
                         initialSlide={slideId}
                         modules={[Navigation, Pagination]}
