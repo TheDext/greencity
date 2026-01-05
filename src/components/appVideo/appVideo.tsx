@@ -32,6 +32,8 @@ export const AppVideo = ({ video, poster }) => {
                 onPause={() => setIsPlaying(false)}
                 onClick={handlePlayClick}
                 poster={poster}
+                preload="none"
+                loading="lazy"
             />
             <div
                 className={classNames(
