@@ -1,15 +1,25 @@
-import { useRef, useState } from 'react';
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
 import classes from './appVideo.module.scss';
 import playIcon from '@icons/play.png';
 import classNames from '@/shared/lib/classNames';
 import { useClickAway } from 'react-use';
 
-export const AppVideo = ({ video, poster }) => {
+export const AppVideo = forwardRef(({ video, poster }, ref) => {
     const videoRef = useRef(null);
+    const videoWrapperRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
-    useClickAway(videoRef, () => {
-        videoRef.current.pause();
+    useImperativeHandle(ref, () => ({
+        videoRef,
+        videoWrapperRef,
+        setIsPlaying,
+    }));
+
+    useClickAway(videoWrapperRef, () => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+            setIsPlaying(false);
+        }
     });
 
     const handlePlayClick = () => {
@@ -18,13 +28,17 @@ export const AppVideo = ({ video, poster }) => {
                 videoRef.current.pause();
             } else {
                 videoRef.current.play();
+                setIsPlaying(true);
             }
-            setIsPlaying(!isPlaying);
         }
     };
 
     return (
-        <div data-video={'wrapper'} className={classes.videoWrapper}>
+        <div
+            data-video={'wrapper'}
+            className={classes.videoWrapper}
+            ref={videoWrapperRef}
+        >
             <video
                 ref={videoRef}
                 src={video}
@@ -41,9 +55,10 @@ export const AppVideo = ({ video, poster }) => {
                     { [classes._isPlaying]: isPlaying },
                     []
                 )}
+                onClick={handlePlayClick}
             >
                 <img src={playIcon} alt="playIcon" />
             </div>
         </div>
     );
-};
+});

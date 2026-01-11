@@ -46,8 +46,8 @@ const RootLayout = () => {
                 <Price />
                 <Videos />
                 <PageContacts />
-                <YandexMap />
-                <Footer />
+                {/*<YandexMap />*/}
+                {/*<Footer />*/}
             </main>
             {!isMobile && (
                 <div id="sidebarWrapper">

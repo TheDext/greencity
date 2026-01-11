@@ -19,7 +19,7 @@
 }
 .phone {
     color: colors.$blackTelText;
-    @include index.responsive-font(12, 16, 320, 768);
+    @include index.responsive-font(12, 16, 320, 425);
 }
 .socials {
     display: flex;

@@ -96,3 +96,19 @@
         background: colors.$greyLight;
     }
 }
+
+@media (max-width: 768px) {
+    .column {
+        min-width: auto;
+    }
+    .item {
+        padding: 23px 0;
+    }
+    .label {
+        @include index.responsive-font(16, 24, 320, 768);
+    }
+
+    .subtext {
+        @include index.responsive-font(16, 24, 320, 768);
+    }
+}
