@@ -24,18 +24,18 @@
 }
 .title {
     color: colors.$grey;
-    @include index.responsive-font(18, 22, 992, 1920);
+    @include index.responsive-font(18, 20, 992, 1920);
 }
 .label {
     color: colors.$darkBlue;
-    @include index.responsive-font(20, 24, 992, 1920);
+    @include index.responsive-font(20, 22, 992, 1920);
 }
 .subtitle {
     color: colors.$greyText;
-    @include index.responsive-font(12, 14, 992, 1920);
+    @include index.responsive-font(12, 13, 992, 1920);
 }
 .subtext {
-    @include index.responsive-font(20, 24, 992, 1920);
+    @include index.responsive-font(20, 22, 992, 1920);
     color: colors.$darkBlue;
 }
 
