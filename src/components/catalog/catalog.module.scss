@@ -1,13 +1,13 @@
 @use '@var/colors';
 .catalog {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
-    margin-top: 60px;
+    margin-top: 20px;
     row-gap: 20px;
 }
 .column {
@@ -41,26 +41,69 @@
             transition: all 0.6s ease;
         }
     }
-    .icon {
-        height: 40px;
-        flex: 0 0 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.4);
-        border-radius: 50%;
-    }
-    .bottom {
-        position: absolute;
-        bottom: 14px;
-        padding: 0 16px;
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        font-size: 26px;
-        column-gap: 9px;
-        color: colors.$white;
-        z-index: 2;
+
+    //.icon {
+    //    height: 40px;
+    //    flex: 0 0 40px;
+    //    display: flex;
+    //    justify-content: center;
+    //    align-items: center;
+    //    background: rgba(255, 255, 255, 0.4);
+    //    border-radius: 50%;
+    //}
+    //.bottom {
+    //    position: absolute;
+    //    bottom: 62px;
+    //    padding: 0 16px;
+    //    display: flex;
+    //    align-items: center;
+    //    font-weight: bold;
+    //    font-size: 26px;
+    //    column-gap: 9px;
+    //    color: colors.$white;
+    //    z-index: 2;
+    //}
+}
+
+.bottom {
+    padding: 0 16px;
+    position: absolute;
+    bottom: 14px;
+    width: 100%;
+    z-index: 2;
+}
+.label {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+}
+.icon {
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+.text {
+    font-weight: bold;
+    font-size: 26px;
+    color: colors.$white;
+}
+.btn {
+    margin-top: 10px;
+    color: #017420;
+    padding: 12px;
+    background: #ecfdf5;
+    border-radius: 15px;
+    border: 1px solid #017420;
+    text-align: center;
+    transition: all 0.6s ease;
+
+    &:hover {
+        background: #047857;
+        color: #ffffff;
     }
 }
 
@@ -69,3 +112,18 @@
         transform: scale(1.1) rotate(2deg);
     }
 }
+
+//.btn {
+//    background: #ffffff;
+//    border: 1px solid #017420;
+//    font-size: 14px;
+//    margin: 14px 0;
+//    width: calc(100% - 32px);
+//
+//    position: absolute;
+//    bottom: 14px;
+//    right: 16px;
+//    text-align: center;
+//    z-index: 2;
+//    padding: 12px;
+//}

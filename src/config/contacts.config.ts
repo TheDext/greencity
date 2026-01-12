@@ -10,8 +10,8 @@ const contactsConfig = [
         id: 'ct01',
         img: img01,
         title: 'Телефон для связи',
-        label: '+7 (922) 260-20-00',
-        link: 'tel:+79222602000',
+        label: '+7 (932) 328-50-00',
+        link: 'tel:+79323285000',
         additionalClassName: 'tel',
     },
     {
@@ -52,7 +52,7 @@ const contactsConfig = [
         link: 'https://yandex.ru/maps/-/CLTuuKZI',
         label: 'ул. Тимофея Кармацкого 20 Алебашевский Bazar,',
         subtitle: 'Уличный торговый павильон',
-        subtext: 'Тюльпаны 🌷 Рассада',
+        subtext: 'Зелёный город',
         additionalClassName: 'point',
     },
     {

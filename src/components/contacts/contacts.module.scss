@@ -2,8 +2,9 @@
 @use '@mixins/index';
 
 .contacts {
-    margin-top: 60px;
+    margin-top: 40px;
 }
+
 .img {
     flex: 0 0 48px;
     height: 48px;
@@ -14,7 +15,7 @@
     align-items: center;
 }
 .item {
-    padding: 23px;
+    padding: 17px 23px;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -103,13 +104,3 @@
         padding: 7px;
     }
 }
-
-//@media (max-width: 768px) {
-//    .label {
-//        @include index.responsive-font(16, 24, 320, 768);
-//    }
-//
-//    .subtext {
-//        @include index.responsive-font(16, 24, 320, 768);
-//    }
-//}

@@ -2,7 +2,7 @@ import classes from './catalog.module.scss';
 import { Title } from '@/components/share/title';
 import catalogConfig from '@config/catalog.config';
 
-export const Catalog = () => {
+export const Catalog = ({ setShowInfoModal }) => {
     const handleClick = (link) => {
         const element = document.getElementById('ourworks');
         if (element) {
@@ -12,6 +12,10 @@ export const Catalog = () => {
                 block: 'start',
             });
         }
+    };
+    const handleBtnClick = (e) => {
+        e.stopPropagation();
+        setShowInfoModal(true);
     };
     return (
         <div className={classes.catalog}>
@@ -27,11 +31,20 @@ export const Catalog = () => {
                             <div className={classes.img}>
                                 <img src={img} alt="img" />
                             </div>
+
                             <div className={classes.bottom}>
-                                <div className={classes.icon}>
-                                    <img src={icon} alt="icon" />
+                                <div className={classes.label}>
+                                    <div className={classes.icon}>
+                                        <img src={icon} alt="icon" />
+                                    </div>
+                                    <div className={classes.text}>{label}</div>
                                 </div>
-                                <div className={classes.label}>{label}</div>
+                                <div
+                                    className={classes.btn}
+                                    onClick={(e) => handleBtnClick(e)}
+                                >
+                                    Купить
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -16,27 +16,36 @@ import { useEffect, useState } from 'react';
 import { Modal } from '@/components/modal';
 import { useLockBodyScroll } from 'react-use';
 import { bodyLock } from '@/shared/lib/bodyLock';
+import { useModalStore } from '@/core/store/modal.store';
+import { InfoModal } from '@/components/infoModal';
 
 const RootLayout = () => {
-    const { isDesktop, isTablet, isMobile } = useMatchMedia();
-    const [showModal, setShowModal] = useState(false);
-    const [current, setCurrent] = useState(null);
-    const [slideId, setSlideId] = useState(null);
+    const { isMobile } = useMatchMedia();
+    const {
+        showModal,
+        showInfoModal,
+        setShowModal,
+        current,
+        setCurrent,
+        slideId,
+        setSlideId,
+        setShowInfoModal,
+    } = useModalStore();
 
     useEffect(() => {
-        if (showModal) {
+        if (showModal || showInfoModal) {
             bodyLock.enable();
         } else {
             bodyLock.disable();
         }
-    }, [showModal]);
+    }, [showModal, showInfoModal]);
 
     return (
         <div className="_container-default">
             <main>
                 {isMobile && <Header />}
                 <MainScreen />
-                <Catalog />
+                <Catalog setShowInfoModal={setShowInfoModal} />
                 <Works
                     setCurrent={setCurrent}
                     setShowModal={setShowModal}
@@ -46,13 +55,14 @@ const RootLayout = () => {
                 <Price />
                 <Videos />
                 <PageContacts />
-                {/*<YandexMap />*/}
-                {/*<Footer />*/}
+                <YandexMap />
+                <Footer />
             </main>
             {!isMobile && (
                 <div id="sidebarWrapper">
                     <div id="sidebar">
                         <Logo />
+                        <h1 className="note">Магазин цветов и растений</h1>
                         <SelfProduction />
                         <Contacts />
                     </div>
@@ -65,6 +75,7 @@ const RootLayout = () => {
                     slideId={slideId}
                 />
             )}
+            {showInfoModal && <InfoModal setShowInfoModal={setShowInfoModal} />}
         </div>
     );
 };

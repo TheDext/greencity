@@ -12,8 +12,7 @@
     align-items: center;
     background: rgba(255, 255, 255, 0.8);
 }
-.body {
-}
+
 .slide {
     width: 590px;
     height: 635px;
@@ -98,11 +97,20 @@
     z-index: 2;
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
     img {
         cursor: pointer;
     }
     &:hover {
-        transform: scale(0.94);
+        background: #017420;
+        border: 1px solid #017420;
     }
 }
 

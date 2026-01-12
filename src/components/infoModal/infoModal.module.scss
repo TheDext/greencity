@@ -1,0 +1,151 @@
+@use '@var/colors';
+@use '@mixins/index';
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    z-index: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.content {
+    background: #ecfdf5;
+    border-radius: 30px;
+    max-width: 590px;
+    position: relative;
+    padding: 75px 16px 32px 16px;
+}
+
+.infoText {
+    font-size: 18px;
+    font-weight: 500;
+    color: #047857;
+
+    &._tel {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+.img {
+    flex: 0 0 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    padding: 17px 23px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    transition: all 0.6s ease 0s;
+}
+.title {
+    color: colors.$grey;
+    @include index.responsive-font(18, 22, 992, 1920);
+}
+.label {
+    color: colors.$darkBlue;
+    @include index.responsive-font(20, 24, 992, 1920);
+}
+.subtitle {
+    color: colors.$greyText;
+    @include index.responsive-font(12, 14, 992, 1920);
+}
+.subtext {
+    @include index.responsive-font(20, 24, 992, 1920);
+    color: colors.$darkBlue;
+}
+.item.point {
+    &:hover {
+        background: colors.$greyHover;
+    }
+    .img {
+        background: colors.$greyLight;
+    }
+}
+.item.tel {
+    justify-content: center;
+    margin-top: 20px;
+    &:hover {
+        background: colors.$greenLightHover;
+    }
+    .img {
+        background: colors.$green;
+    }
+}
+
+.row {
+    margin-top: 10px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    @include index.responsive-width(32, 48, 320, 425);
+    @include index.responsive-height(32, 48, 320, 425);
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    img {
+        cursor: pointer;
+    }
+    &:hover {
+        background: #017420;
+        border: 1px solid #017420;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        padding: 10px 0;
+        @include index.responsive-property('paddingLeft', 0, 20, 320, 768);
+        @include index.responsive-property('paddingRight', 0, 20, 320, 768);
+    }
+    .title {
+        color: colors.$grey;
+        @include index.responsive-font(12, 18, 320, 768);
+    }
+    .label {
+        color: colors.$darkBlue;
+        @include index.responsive-font(14, 22, 320, 768);
+    }
+    .subtitle {
+        color: colors.$greyText;
+        @include index.responsive-font(12, 14, 320, 768);
+    }
+    .subtext {
+        @include index.responsive-font(14, 22, 320, 768);
+        color: colors.$darkBlue;
+    }
+    .infoText {
+        @include index.responsive-font(14, 18, 320, 768);
+        margin-top: 20px !important;
+    }
+    .img {
+        flex: 0 0 auto;
+        @include index.responsive-width(32, 48, 320, 768);
+        @include index.responsive-height(32, 48, 320, 768);
+        img {
+            @include index.responsive-width(13, 24, 320, 768);
+        }
+    }
+}
