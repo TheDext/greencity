@@ -9,7 +9,6 @@ import hydrangea1 from '@img/works/hydrangeas/01.webp';
 import hydrangea2 from '@img/works/hydrangeas/02.webp';
 import hydrangea3 from '@img/works/hydrangeas/03.webp';
 import hydrangea4 from '@img/works/hydrangeas/04.webp';
-import hydrangea5 from '@img/works/hydrangeas/05.webp';
 import hydrangea6 from '@img/works/hydrangeas/06.webp';
 import hydrangea7 from '@img/works/hydrangeas/07.webp';
 
@@ -121,11 +120,7 @@ const worksConfig = {
                 slideId: 3,
                 img: hydrangea4,
             },
-            {
-                id: 'wh5',
-                slideId: 4,
-                img: hydrangea5,
-            },
+
             {
                 id: 'wh6',
                 slideId: 5,

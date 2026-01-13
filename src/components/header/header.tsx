@@ -3,6 +3,7 @@ import { Logo } from '@/components/logo';
 import { Link } from 'react-router';
 import tgIcon from '@icons/contacts/04.png';
 import telIcon from '@icons/contacts/01.png';
+import vkIcon from '@icons/contacts/03.png';
 import classNames from '@/shared/lib/classNames';
 
 export const Header = () => {
@@ -14,6 +15,12 @@ export const Header = () => {
                     +7(932) 328-50-00
                 </Link>
                 <div className={classes.socials}>
+                    <Link
+                        to="https://vk.com/hydrangeas72"
+                        className={classNames(classes.item, {}, [classes.vk])}
+                    >
+                        <img src={vkIcon} alt="vkIcon" />
+                    </Link>{' '}
                     <Link
                         to="https://t.me/bestflowershere"
                         className={classNames(classes.item, {}, [classes.tg])}

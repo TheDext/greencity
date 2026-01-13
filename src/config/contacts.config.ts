@@ -59,7 +59,7 @@ const contactsConfig = [
         id: 'ct07',
         img: img06,
         title: 'Адрес производтва',
-        link: 'https://yandex.ru/maps/-/CLTJN-nv',
+        link: 'https://2gis.ru/tyumen/geo/1830223003885645/66.560246,56.402914',
         label: 'Тюменская область, Заводоуовский район, п. Мичуринский 14 ',
         subtitle: 'Тепличное хозяйство',
         additionalClassName: 'point',

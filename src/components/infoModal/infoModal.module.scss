@@ -125,7 +125,7 @@
         @include index.responsive-font(12, 18, 320, 768);
     }
     .label {
-        color: colors.$darkBlue;
+        color: colors.$blackClient;
         @include index.responsive-font(14, 22, 320, 768);
     }
     .subtitle {
@@ -134,7 +134,7 @@
     }
     .subtext {
         @include index.responsive-font(14, 22, 320, 768);
-        color: colors.$darkBlue;
+        color: colors.$blackClient;
     }
     .infoText {
         @include index.responsive-font(14, 18, 320, 768);

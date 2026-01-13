@@ -19,15 +19,15 @@
 }
 .phone {
     color: colors.$blackTelText;
-    @include index.responsive-font(12, 16, 320, 425);
+    @include index.responsive-font(11, 16, 320, 425);
 }
 .socials {
     display: flex;
     column-gap: 9px;
 }
 .item {
-    @include index.responsive-height(29, 32, 320, 768);
-    @include index.responsive-width(29, 32, 320, 768);
+    @include index.responsive-height(25, 32, 320, 400);
+    @include index.responsive-width(25, 32, 320, 400);
 
     border-radius: 50%;
     display: flex;
@@ -48,5 +48,19 @@
         @include index.responsive-width(14, 17, 320, 768);
         @include index.responsive-height(11, 13, 320, 768);
         transform: translate(-2px, 0);
+    }
+}
+.item.vk {
+    background: colors.$blueVk;
+    img {
+        width: 18px;
+        height: 11px;
+    }
+
+    @media (max-width: 400px) {
+        img {
+            width: 16px;
+            height: 9px;
+        }
     }
 }

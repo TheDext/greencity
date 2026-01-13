@@ -15,7 +15,7 @@
     @include index.responsive-font(36, 46, 320, 768);
 }
 .bold {
-    color: colors.$greenTitleBold;
+    color: colors.$greenClient;
     font-weight: 500;
     @include index.responsive-font(38, 48, 320, 768);
 }

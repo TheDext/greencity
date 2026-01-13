@@ -38,7 +38,7 @@
     @include index.responsive-font(14, 22, 320, 768);
 }
 .label {
-    color: colors.$darkBlue;
+    color: colors.$blackClient;
     @include index.responsive-font(18, 24, 320, 768);
 }
 .subtitle {
@@ -46,7 +46,7 @@
     color: colors.$greyText;
 }
 .subtext {
-    color: colors.$darkBlue;
+    color: colors.$blackClient;
     @include index.responsive-font(18, 24, 320, 768);
 }
 

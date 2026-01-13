@@ -27,7 +27,7 @@
     @include index.responsive-font(18, 20, 992, 1920);
 }
 .label {
-    color: colors.$darkBlue;
+    color: colors.$blackClient;
     @include index.responsive-font(20, 22, 992, 1920);
 }
 .subtitle {
@@ -36,7 +36,7 @@
 }
 .subtext {
     @include index.responsive-font(20, 22, 992, 1920);
-    color: colors.$darkBlue;
+    color: colors.$blackClient;
 }
 
 .item.tel {

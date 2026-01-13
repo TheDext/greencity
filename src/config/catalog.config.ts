@@ -1,4 +1,4 @@
-import img01 from '@img/catalog/01.jpg';
+import img01 from '@img/catalog/01.webp';
 import img02 from '@img/catalog/02.jpg';
 import img03 from '@img/catalog/03.png';
 import img04 from '@img/catalog/04.jpg';
