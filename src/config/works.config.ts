@@ -28,7 +28,6 @@ import conifers5 from '@img/works/conifers/05.webp';
 import conifers6 from '@img/works/conifers/06.webp';
 
 import strawberry1 from '@img/works/strawberry/01.webp';
-import strawberry2 from '@img/works/strawberry/02.webp';
 
 // Shrubs - 11 webp файлов (02-12) Лиственные
 import shrubs1 from '@img/works/shrubs/01.webp';
@@ -233,11 +232,6 @@ const worksConfig = {
                 id: 'wst1',
                 slideId: 0,
                 img: strawberry1,
-            },
-            {
-                id: 'wst2',
-                slideId: 1,
-                img: strawberry2,
             },
         ],
     },
