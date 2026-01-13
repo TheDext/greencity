@@ -10,8 +10,8 @@ export const Header = () => {
         <header className={classes.header}>
             <div className={classes.row}>
                 <Logo />
-                <Link to="tel:+79226666643" className={classes.phone}>
-                    +7 (922) 666-66-43
+                <Link to="tel:+79323285000" className={classes.phone}>
+                    +7(932) 328-50-00
                 </Link>
                 <div className={classes.socials}>
                     <Link
