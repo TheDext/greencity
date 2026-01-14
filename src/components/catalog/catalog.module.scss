@@ -93,16 +93,16 @@
 }
 .btn {
     margin-top: 10px;
-    color: #017420;
+    color: colors.$greenClient;
     padding: 12px;
-    background: #ecfdf5;
+    background: colors.$greenLight;
     border-radius: 15px;
-    border: 1px solid #017420;
+    border: 1px solid colors.$greenClient;
     text-align: center;
     transition: all 0.6s ease;
 
     &:hover {
-        background: #047857;
+        background: colors.$greenClient;
         color: #ffffff;
     }
 }

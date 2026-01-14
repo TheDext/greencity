@@ -15,7 +15,7 @@ export const Price = () => {
                 <img src={img} alt="pdf" />
             </div>
             <a className={classes.btn} href={price} download="price.pdf">
-                <img src={icon} alt="download" />
+                <div className={classes.icon}></div>
                 <div className={classes.text}>Скачать прайс в PDF</div>
             </a>
         </div>

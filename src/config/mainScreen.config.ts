@@ -13,16 +13,7 @@ const mainScreenConfig = [
         img: img01,
         imgMob: img01Mob,
     },
-    {
-        id: 'ms02',
-        img: img02,
-        imgMob: img02Mob,
-    },
-    {
-        id: 'ms03',
-        img: img03,
-        imgMob: img03Mob,
-    },
+
     {
         id: 'ms04',
         img: img04,

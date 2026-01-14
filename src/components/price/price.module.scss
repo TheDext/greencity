@@ -14,7 +14,8 @@
     margin-top: 32px;
 }
 .btn {
-    background: colors.$greenTitleBold;
+    background: colors.$greenClient;
+    border: 1px solid colors.$greenClient;
     padding: 17px 25px;
     margin: 0 auto;
     margin-top: 32px;
@@ -30,6 +31,22 @@
     transition: all 0.6s ease 0s;
 
     &:hover {
-        background: colors.$green;
+        background: colors.$greenLightHover;
+        color: colors.$greenClient;
+        .icon {
+            transition: all 0.3s ease 0s;
+            width: 20px;
+            height: 20px;
+            background: url('src/assets/icons/downloadGreen.png') center /
+                11.5px 14.1px no-repeat;
+        }
+    }
+
+    .icon {
+        transition: all 0.3s ease 0s;
+        width: 20px;
+        height: 20px;
+        background: url('src/assets/icons/download.png') center / 11.5px 14.1px
+            no-repeat;
     }
 }

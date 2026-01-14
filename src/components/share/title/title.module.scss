@@ -9,7 +9,7 @@
     flex-wrap: wrap;
 }
 .regular {
-    color: colors.$darkBlue;
+    color: colors.$blackClient;
     text-transform: capitalize;
     font-size: 48px;
     @include index.responsive-font(36, 46, 320, 768);

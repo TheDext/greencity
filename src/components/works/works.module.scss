@@ -19,7 +19,7 @@
 }
 .tab {
     background: colors.$greenLight;
-    color: colors.$greenTitleBold;
+    color: colors.$greenClient;
     font-size: 18px;
     @include index.responsive-font(14, 18, 992, 1170);
     font-weight: 500;
@@ -32,12 +32,12 @@
     position: relative;
     &:hover {
         color: colors.$white;
-        background: colors.$greenTitleBold;
+        background: colors.$greenClient;
     }
 
     &._active {
         color: colors.$white;
-        background: colors.$greenTitleBold;
+        background: colors.$greenClient;
     }
 }
 
