@@ -20,7 +20,7 @@ export const Header = () => {
                         className={classNames(classes.item, {}, [classes.vk])}
                     >
                         <img src={vkIcon} alt="vkIcon" />
-                    </Link>{' '}
+                    </Link>
                     <Link
                         to="https://t.me/bestflowershere"
                         className={classNames(classes.item, {}, [classes.tg])}
@@ -28,7 +28,7 @@ export const Header = () => {
                         <img src={tgIcon} alt="tgIcon" />
                     </Link>
                     <Link
-                        to="tel:+79222602000"
+                        to="tel:+79323285000"
                         className={classNames(classes.item, {}, [classes.tel])}
                     >
                         <img src={telIcon} alt="telIcon" />
