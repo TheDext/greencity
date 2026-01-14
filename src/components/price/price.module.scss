@@ -37,8 +37,8 @@
             transition: all 0.3s ease 0s;
             width: 20px;
             height: 20px;
-            background: url('src/assets/icons/downloadGreen.png') center /
-                11.5px 14.1px no-repeat;
+            background: url('@/assets/icons/downloadGreen.png') center / 11.5px
+                14.1px no-repeat;
         }
     }
 
@@ -46,7 +46,7 @@
         transition: all 0.3s ease 0s;
         width: 20px;
         height: 20px;
-        background: url('src/assets/icons/download.png') center / 11.5px 14.1px
+        background: url('@/assets/icons/download.png') center / 11.5px 14.1px
             no-repeat;
     }
 }
