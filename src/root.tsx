@@ -19,8 +19,8 @@ export const links: Route.LinksFunction = () => [
     },
     {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'
-    }
+        href: 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap',
+    },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -31,6 +31,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1"
+                />
+                <title>
+                    Купить цветы в Тюмени: тюльпаны, гортензии, клубнику,
+                    рассаду | Зеленый город.
+                </title>
+                <meta
+                    name="description"
+                    content="Живые цветы, рассада и саженцы в Тюмени! Тюльпаны, гортензии, клубника, земляника. «Зеленый город» — магазин цветов и растений. Свежесть, консультации по уходу, доступные цены!"
                 />
                 <Meta />
                 <Links />

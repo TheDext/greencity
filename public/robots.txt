@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /_next/static/
+
+User-agent: Yandex
+Allow: /
+Disallow: /_next/
+Disallow: /_next/static/
+Host: https://gorodzelenii.ru/
+Clean-param: ref /
+
+Sitemap: https://gorodzelenii.ru/sitemap.xml
