@@ -12,7 +12,7 @@ const AdvantagesConfig = [
     {
         id: 'adv02',
         img: img02,
-        text: 'Короткие сроки исполннеия заказа',
+        text: 'Короткие сроки исполнения заказа',
     },
     {
         id: 'adv03',
@@ -22,7 +22,7 @@ const AdvantagesConfig = [
     {
         id: 'adv04',
         img: img04,
-        text: 'Индивидульный подход',
+        text: 'Индивидуальный подход',
     },
 ];
 
