@@ -37,7 +37,7 @@ export const Catalog = ({ setShowInfoModal }) => {
                                     <div className={classes.icon}>
                                         <img src={icon} alt="icon" />
                                     </div>
-                                    <div className={classes.text}>{label}</div>
+                                    <h3 className={classes.text}>{label}</h3>
                                 </div>
                                 <div
                                     className={classes.btn}

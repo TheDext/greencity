@@ -8,9 +8,9 @@ export const Title = ({
     bold: string;
 }) => {
     return (
-        <div className={classes.title}>
+        <h2 className={classes.title}>
             {regular && <div className={classes.regular}>{regular}</div>}
             <div className={classes.bold}>{bold}</div>
-        </div>
+        </h2>
     );
 };

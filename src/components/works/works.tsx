@@ -42,7 +42,7 @@ export const Works = ({ setShowModal, setCurrent, setSlideId }) => {
                 >
                     {tabs.map(({ id, text }) => (
                         <SwiperSlide style={{ width: 'auto' }}>
-                            <div
+                            <h3
                                 className={classNames(
                                     classes.tab,
                                     {
@@ -55,7 +55,7 @@ export const Works = ({ setShowModal, setCurrent, setSlideId }) => {
                                 onClick={() => setCurrentCategory(id)}
                             >
                                 {text}
-                            </div>
+                            </h3>
                         </SwiperSlide>
                     ))}
                 </Swiper>
